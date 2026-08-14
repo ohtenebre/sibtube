@@ -1,0 +1,342 @@
+/* roboto */
+@font-face {
+    font-display: swap;
+    font-family: 'roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/roboto-v32-cyrillic_latin-regular.woff2') format('woff2');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url('fonts/roboto-v32-cyrillic_latin-500.woff2') format('woff2');
+}
+
+/* global styles start */
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'roboto';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: bold;
+    color: black;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+/* global styles end */
+
+/* header styles start */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between; /* Распределяет элементы по краям */
+    align-items: center; /* Центрирует элементы по вертикали */
+}
+
+.header__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end; /* Сдвигаем информацию о пользователе вправо */
+    width: 100%; /* Убедитесь, что контейнер на всю ширину */
+}
+
+.header__logo {
+    margin-right: auto; /* Логотип выравниваем влево */
+}
+
+.header__logo-pic {
+    width: 80px;
+    height: auto;
+}
+
+.header__pic {
+    width: 40px;
+    height: auto;
+}
+
+.header__user-info {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Отступ между элементами */
+}
+
+.header__username {
+    font-size: 16px;
+    font-weight: 500;
+    color: #dadce7;
+}
+
+.header__icons {
+    display: flex;
+    gap: 15px;
+    align-items: center; /* Добавить центрирование по вертикали */
+}
+
+.header__icon {
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s;
+}
+
+.header__icon:hover {
+    color: #1E22AA; /* Цвет при наведении */
+}
+
+.header__icon:active {
+    color: #151994; /* Цвет при нажатии */
+}
+/* header styles end */
+
+
+/* intro styles start */
+
+.intro {
+    position: relative; /* Устанавливаем контекст для псевдоэлемента */
+    height: 100vh;
+    overflow: hidden; /* Скрываем лишнее */
+    z-index: 1; /* Чтобы содержимое было выше фона */
+}
+
+.auth {
+    padding-top: calc(50px + 50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+}
+
+.auth__menu-items {
+    display: flex;
+    position: relative;
+}
+
+/* Стили для пунктов меню */
+.auth__menu-items li {
+    color: #fff;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.auth__menu-items li a {
+    text-decoration: none;
+    color: #fff;
+    padding-bottom: 5px;  /* Оставляем место для полоски */
+    position: relative;
+}
+
+/* Плавное перемещение полоски */
+.auth__menu-items li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff; /* Белая полоска */
+    transform: scaleX(0); /* Начальная позиция (невидимая) */
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out; /* Плавное появление полоски */
+}
+
+.auth__menu-items li a:hover::after,
+.auth__menu-items li a.active::after {
+    transform: scaleX(1); /* Полоска появляется при наведении или активации */
+    transform-origin: bottom left; /* Позиция полоски изменяется на левую сторону */
+}
+
+/* Активный элемент меню */
+.auth__menu-items li a.active {
+    border-bottom: 0.5px solid white; /* Белая полоска под активной ссылкой */
+}
+
+/* Плавное исчезновение полоски */
+.auth__menu-items li a:hover {
+    background-color: transparent;
+}
+
+.auth__form {
+    margin-top: 20px;
+    width: 450px;
+    background-color: aliceblue;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px; /* равномерные отступы внутри */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* небольшой эффект тени */
+}
+
+.auth__form-items {
+    width: 100%; /* Растягиваем внутренний блок на всю ширину формы */
+}
+
+.auth__input {
+    background-color:#E8F0FE;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px; /* увеличиваем нижний отступ */
+    font-size: 12px;
+}
+
+.auth__input::placeholder{
+    color: rgb(179, 179, 179);
+    font-size: 12px;
+}
+
+.auth__button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1E22AA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px; /* немного увеличиваем текст кнопки */
+    transition: box-shadow 0.3s, transform 0.3s;  /* Плавный переход */
+}
+
+.auth__button:hover {
+    background-color: #2227b6;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);  /* Легкая тень */
+    transform: scale(1.05); /* Увеличиваем кнопку выхода */
+    transition: box-shadow 0.3s, transform 0.3s;  /* Плавный переход */
+}
+
+.auth__form-title{
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.auth__form-txt{
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.auth__form-notice {
+    color: rgb(179, 179, 179);
+    font-size: 12px;
+    margin-top: 10px; /* добавляем отступ сверху */
+}
+
+.response-message {
+    color: rgb(179, 179, 179);
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+
+/* intro styles end */
+
+/* Upload styles start */
+
+/* upload styles start */
+
+.upload-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f4f4f9; /* Светлый фон */
+}
+
+.upload-container {
+    background: aliceblue;
+    border-radius: 20px;
+    padding: 40px;
+    width: 450px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.upload-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #1E22AA;
+}
+
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.upload-input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #1E22AA;
+    border-radius: 5px;
+    background: #fff;
+    color: #333;
+}
+
+.upload-input::placeholder {
+    color: #999;
+}
+
+.upload-button {
+    padding: 12px;
+    background-color: #1E22AA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.upload-button:hover {
+    background-color: #151994;
+}
+
+.upload-message {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+/* Эффект при наведении на иконки в header */
+.header__icon:hover {
+    transform: scale(1.1);  /* Увеличиваем иконку */
+    color: #1E22AA;  /* Цвет иконки при наведении */
+    transition: transform 0.3s, color 0.3s;  /* Плавный переход */
+}
+
+.header__exit-button:hover {
+    transform: scale(1.1); /* Увеличиваем кнопку выхода */
+    transition: transform 0.3s;  /* Плавный переход */
+}
+
+/* Эффект при наведении на ссылку "Войдите в аккаунт" */
+.header__username:hover {
+    color: #9497db;
+    cursor: pointer;
+    transform: scale(1.1);  /* Увеличиваем иконку */
+    transition: color 0.3s;
+}
+
+/* Эффект при наведении на весь header */
+.header__logo-pic:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);  /* Легкая тень */
+    transform: scale(1.1); /* Увеличиваем кнопку выхода */
+    transition: box-shadow 0.3s, transform 0.3s;  /* Плавный переход */
+}

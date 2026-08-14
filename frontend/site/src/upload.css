@@ -1,0 +1,240 @@
+/* roboto */
+@font-face {
+    font-display: swap;
+    font-family: 'roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/roboto-v32-cyrillic_latin-regular.woff2') format('woff2');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url('fonts/roboto-v32-cyrillic_latin-500.woff2') format('woff2');
+}
+
+/* global styles start */
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'roboto';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: bold;
+    color: black;
+    background-image: url(img/bg.svg);
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+/* global styles end */
+
+/* header styles start */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 10px 0;
+    z-index: 10;
+}
+
+.header__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.header__logo-pic {
+    width: 80px;
+    height: auto;
+}
+/* header styles end */
+
+/* intro styles start */
+
+
+/* intro styles end */
+
+/* Upload styles start */
+
+.upload-page {
+    z-index: 10;
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    min-height: 100vh; /* Занимаем всю высоту экрана */
+    width: 100%; /* Занимаем всю ширину экрана */
+    background-color: #15199400;
+}
+
+.upload-container {
+    background: aliceblue;
+    border-radius: 20px;
+    padding: 40px;
+    width: 450px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.upload-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #1E22AA;
+}
+
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.upload-input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #1E22AA;
+    border-radius: 5px;
+    background: #fff;
+    color: #333;
+}
+
+.upload-input::placeholder {
+    color: #999;
+}
+
+.upload-button {
+    padding: 12px;
+    background-color: #1E22AA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.upload-button:hover {
+    background-color: #151994;
+}
+
+.upload-message {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+
+/* upload styles end */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .upload-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .upload-message {
+    text-align: center;
+    color: red;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .modal-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .modal-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .modal-button {
+    background: #151994;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .modal-button:hover {
+    background: #101170;
+  }
+  
+  .modal-message {
+    margin-top: 15px;
+    color: red;
+  }
+  

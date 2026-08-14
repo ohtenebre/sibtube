@@ -1,0 +1,146 @@
+.videos-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #15199400;
+  padding-top: 70px;
+  width: 100%; /* Убедитесь, что контейнер занимает всю ширину */
+  box-sizing: border-box;
+}
+
+
+.videos-container {
+  width: 80%;
+  max-width: 800px;
+  background: aliceblue;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.videos-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #dedfe6;
+  text-align: center;
+}
+
+.videos-message {
+  font-size: 14px;
+  color: red;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.videos-list {
+  list-style: none;
+  padding: 0;
+}
+
+.video-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.video-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+}
+
+.video-link {
+  font-size: 14px;
+  color: #1e22aa;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.video-link:hover {
+  color: #151994;
+}
+
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Автоматическое распределение колонок */
+  gap: 20px;
+  margin-top: 20px;
+  width: 100%; /* Обеспечивает, чтобы сетка занимала всю ширину контейнера */
+  box-sizing: border-box; /* Чтобы padding не выходил за пределы */
+}
+
+
+.video-card {
+  background: #8c8be623;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.video-thumbnail {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.video-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 10px 0;
+  color: #dedfe6;
+}
+
+.video-link {
+  color: #1e22aa;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.upload__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.upload__logo-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.upload__logo-pic {
+  width: 50px;
+  height: 50px;
+}
+
+.upload__text {
+  font-size: 14px; /* Маленький текст */
+  color: rgb(177, 177, 177); /* Черный цвет текста */
+  margin-top: 5px;
+  text-align: center;
+}
+
+
+.video__pick {
+  width: 50px;
+  height: 50px;
+  margin: 0 10px; /* Добавляем отступы слева и справа */
+}
+.video-thumbnail {
+  width: 100%;
+  height: 150px; /* Задайте фиксированную высоту */
+  border-radius: 10px;
+  object-fit: cover; /* Сохраняет соотношение сторон, обрезая изображение */
+}

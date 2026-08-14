@@ -1,0 +1,207 @@
+/* roboto */
+@font-face {
+    font-display: swap;
+    font-family: 'roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('fonts/roboto-v32-cyrillic_latin-regular.woff2') format('woff2');
+}
+@font-face {
+    font-display: swap;
+    font-family: 'roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: url('fonts/roboto-v32-cyrillic_latin-500.woff2') format('woff2');
+}
+
+/* global styles start */
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'roboto';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: bold;
+    color: black;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+/* global styles end */
+
+/* header styles start */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 10px 0;
+    z-index: 10;
+}
+
+.header__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.header__logo-pic {
+    width: 80px;
+    height: auto;
+}
+/* header styles end */
+
+.video-page {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирование по горизонтали */
+    justify-content: center; /* Центрирование по вертикали */
+    overflow: hidden;
+}
+
+.video__n__chat {
+    display: flex; /* Горизонтальное распределение элементов */
+    justify-content: flex-start; /* Выравнивание по левому краю */
+    align-items: flex-start;
+    gap: 0; /* Убираем отступы между видео и чатом */
+    width: 1000px; /* Можно указать ширину контейнера для настройки */
+}
+
+.video-container {
+    flex: 2; /* Видео занимает больше места */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-container {
+    color: #FFFFFF;
+    width: 360px; /* Ширина чата */
+    height: 360px; /* Высота чата */
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-left: 0; /* Убираем отступы */
+}
+
+.video-player {
+    width: 640px; /* Ширина видео */
+    height: 360px; /* Высота видео */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.chat-tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.chat-tabs button {
+    flex: 1;
+    background: none;
+    color: #FFFFFF;
+    border: none;
+    border-bottom: 2px solid transparent;
+    font-size: 14px;
+    padding: 5px 0;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.chat-tabs button.active-tab {
+    border-color: #4C68FF; /* Синий подчеркивающий цвет для активной вкладки */
+}
+
+.chat-messages {
+    display: flex;
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.message {
+    background: #1E1E1E;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.message-author {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.message-text {
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.like-btn {
+    text-align: right;
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.chat-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.chat-input textarea {
+    flex: 1;
+    resize: none;
+    height: 40px;
+    padding: 5px;
+    border: 1px solid #1E22AA;
+    border-radius: 5px;
+    background: #1E1E1E;
+    color: #FFFFFF;
+}
+
+.send-btn {
+    background: #1E22AA;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.send-btn:hover {
+    background: #151994;
+}
+
+.chat-username {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+.edit-btn {
+    background: none;
+    color: #1E22AA;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
